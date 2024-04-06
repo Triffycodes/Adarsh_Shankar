@@ -772,7 +772,7 @@ footer p {
   text-align: center;
 }
 
-#gap-mode-about{
+#about-mode{
   display: inline;
   padding-top: 8vh;
   height: 0vh;
@@ -781,7 +781,7 @@ footer p {
   min-height: fit-content;
 }
 
-#gap-mode-experience{
+#experience-mode{
   display: block;
   padding-top: 10vh;
   height: 0vh;
@@ -790,7 +790,7 @@ footer p {
   min-height: fit-content;
 }
 
-#gap-mode-projects{
+#projects-mode{
   display: block;
   padding-top: 10vh;
   height: 0vh;
