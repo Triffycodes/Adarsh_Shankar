@@ -12,7 +12,7 @@
   --secondary-color: hsla(209, 50%, 23%, 0.913);
   --tertiary-color: hsla(198, 73%, 39%, 0.735);
   --hover-color:hsla(0, 70%, 65%, 0.757);
-  --shadow-color: hsl(206, 7%, 19%);
+  --shadow-color: hsla(198, 73%, 39%, 0.735);
   --btn-color-1: hsl(0, 0%, 0%);
   --btn-color-2: hsl(0, 0%, 100%);
   --nav-link-color: hsla(175, 37%, 65%, 0.598);
@@ -26,7 +26,7 @@
   --primary-color: hsla(0, 0%, 5%, 0.88);
   --secondary-color: hsl(0, 0%, 100%);
   --tertiary-color:hsl(0, 0%, 100%);
-  --shadow-color:hsla(0, 0%, 4%, 0.299);
+  --shadow-color: hsla(24, 53%, 45%, 0.598);
   --btn-color-1: hsla(24, 79%, 49%, 0.884);
   --btn-color-2: hsla(0, 0%, 5%, 0.784);
   --nav-link-color: hsl(0, 3%, 7%);
@@ -339,7 +339,7 @@ section {
 
 .section__pic-container img {
   border-radius: 50% 20% / 10% 40%;
-  filter: drop-shadow(30px 10px 4px var(--shadow-color));
+  filter: drop-shadow(1rem 1.5rem 1.95rem var(--shadow-color));
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -483,7 +483,6 @@ section {
 
 .about-pic {
   border-radius: 2rem;
-  background-image:;
 }
 
 .arrow {
@@ -535,7 +534,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: var(--secondary-color);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -604,35 +603,162 @@ article .icon {
   height: 80vh;
 }
 
-.contact-info-upper-container {
+.card {
+  position: relative;
   display: flex;
-  justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
-  margin: 2rem auto;
-  padding: 0.5rem;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  background: lightgrey;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  border: 2px solid rgb(255, 255, 255);
 }
 
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+.background {
+  position: absolute;
+  inset: 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 }
 
-.contact-info-container p {
-  font-size: larger;
+.logo-socials {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 3px;
 }
 
-.contact-icon {
-  cursor: default;
+.logo-socials .logo-svg-socials {
+  fill: white;
+  width: 25px;
+  height: 25px;
 }
 
-.email-icon {
-  height: 2.5rem;
+.icon-socials {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-socials .svg-socials {
+  fill: rgba(255, 255, 255, 0.797);
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.box {
+  position: absolute;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0%/10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.box:hover .svg-socials {
+  fill: white;
+}
+
+.box1 {
+  width: 68%;
+  height: 68%;
+  bottom: -70%;
+  left: -70%;
+}
+
+.box1::before {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff53d4 60%, #62c2fe 90%);
+}
+
+.box1:hover::before {
+  opacity: 1;
+}
+
+.box1:hover .icon-socials .svg-socials {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  transition-delay: 0.2s;
+}
+
+.box2::before {
+  background: radial-gradient(circle at 30% 107%, #91e9ff 0%, #00ACEE 90%);
+}
+
+.box2:hover::before {
+  opacity: 1;
+}
+
+.box2:hover .icon-socials .svg-socials {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box3 {
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
+  transition-delay: 0.2s;
+}
+
+.box3::before {
+  background: radial-gradient(circle at 30% 107%, #969fff 0%, #b349ff 90%);
+}
+
+.box3:hover::before {
+  opacity: 1;
+}
+
+.box3:hover .icon-socials .svg-socials {
+  filter: drop-shadow(0 0 5px white);
+}
+
+.box4 {
+  width: 10%;
+  height: 10%;
+  bottom: -10%;
+  left: -10%;
+  transition-delay: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.card:hover .logo-socials {
+  transform: translate(70px, -52px);
+  letter-spacing: 0px;
 }
 
 /* FOOTER SECTION */
