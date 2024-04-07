@@ -462,7 +462,7 @@ section {
 
 #about {
   position: relative;
-  height:80vh;
+  
 }
 
 .about-containers {
@@ -501,6 +501,10 @@ section {
   text-align: center;
 }
 
+.details-container p{
+  text-align: left;
+  text-wrap: nowrap;
+}
 .section-container {
   display: flex;
   gap: 4rem;
@@ -530,7 +534,7 @@ section {
 
 #experience {
   position: relative;
-  height: 80vh;
+  
 }
 
 .experience-sub-title {
@@ -570,7 +574,7 @@ article .icon {
 
 #projects {
   position: relative;
-  height: 80vh;
+  
 }
 
 .color-container {
@@ -773,7 +777,7 @@ footer p {
 }
 
 #about-mode{
-  display: inline;
+  display: relative;
   padding-top: 8vh;
   height: 0vh;
   margin: 0 10rem;
@@ -782,7 +786,8 @@ footer p {
 }
 
 #experience-mode{
-  display: block;
+  display: relative;
+  
   padding-top: 10vh;
   height: 0vh;
   margin: 0 10rem;
@@ -791,9 +796,10 @@ footer p {
 }
 
 #projects-mode{
-  display: block;
+  display: relative;
+  
   padding-top: 10vh;
-  height: 0vh;
+  height:0vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
