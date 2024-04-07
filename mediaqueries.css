@@ -11,7 +11,7 @@
     height: fit-content;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     #profile {
       height: 83vh;
       margin-bottom: 6rem;
@@ -23,6 +23,7 @@
     #projects {
       height: fit-content;
     }
+
   }
   
   @media screen and (max-width: 1200px) {
