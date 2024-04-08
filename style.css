@@ -492,6 +492,13 @@ section {
   bottom: 2.5rem;
   z-index: 100;
 }
+.arrow-carousel {
+  position: absolute;
+  right: -3rem;
+  bottom: 0;
+  z-index: 100;
+
+}
 
 .details-container {
   padding: 1.5rem;
@@ -594,6 +601,7 @@ article .icon {
   height: 100%;
   position: absolute;
   inset: 0 0 0 0;
+  object-fit: cover;
 }
 .carousel .list .item img{
   width: 100%;
@@ -602,7 +610,7 @@ article .icon {
 }
 .carousel .list .item .content{
   position: absolute;
-  top: 20%;
+  top: 10%;
   width: 1140px;
   max-width: 80%;
   left: 50%;
@@ -610,27 +618,40 @@ article .icon {
   padding-right: 30%;
   box-sizing: border-box;
   color: #fff;
-  text-shadow: 0 5px 10px #0004;
+  text-shadow: 0 10px 10px #0004;
+  
+  background: rgba(35, 34, 34, 0.887);
+  
 }
 .carousel .list .item .author{
   font-weight: bold;
   letter-spacing: 10px;
+  margin-left: 2rem;
+  
+  
 }
-.carousel .list .item .title,
-.carousel .list .item .topic{
-  font-size: 5em;
+.carousel .list .item .title{
+  font-size: 3rem;
   font-weight: bold;
   line-height: 1.3em;
-}
-.carousel .list .item .topic{
   color: #f1683a;
+  text-align: left;
+  margin-left: 1rem;
+  
 }
+.carousel .list .item .des{
+  margin-left: 1rem;
+  
+}
+
+
 .carousel .list .item .buttons{
   display: grid;
-  grid-template-columns: repeat(2, 130px);
-  grid-template-rows: 40px;
-  gap: 5px;
-  margin-top: 20px;
+  grid-template-columns: repeat(2, 8.125rem);
+  grid-template-rows: 3rem;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 .carousel .list .item .buttons button{
   border: none;
@@ -638,6 +659,7 @@ article .icon {
   letter-spacing: 3px;
   font-family: Poppins;
   font-weight: 500;
+  
 }
 .carousel .list .item .buttons button:nth-child(2){
   background-color: transparent;

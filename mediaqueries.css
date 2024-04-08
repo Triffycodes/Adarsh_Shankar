@@ -241,7 +241,18 @@
     }
   }
 
-  
+  #projects{
+    margin: 0 5%;
+  }
+  .carousel .list .item .buttons{
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .carousel .list .item .buttons button{
+    display: block;
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
 
   @media screen and (max-width: 320px) {
     #contact,
@@ -360,6 +371,11 @@
       text-align: justify;
     }
   }
-
+  .carousel .list .item .buttons{
+    display: block;
+    size: 1rem;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
    
   
