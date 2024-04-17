@@ -687,19 +687,29 @@ article .icon {
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  filter: blur(0.1rem);
 }
 .thumbnail .item .content{
   color: #fff;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+  top: 4rem;
+  bottom: 0.5rem;
+  left:  0.5rem;
+  right:  0.5rem;
 }
 .thumbnail .item .content .title{
   font-weight: 500;
+  font-size: 1.5rem;
+  text-align: center;
+  text-shadow: hsl(60, 82%, 39%) 1px 0 10px;
+  backdrop-filter: blur(0.4rem);
 }
 .thumbnail .item .content .description{
   font-weight: 300;
+  font-size: small;
+  text-align: center;
+  text-shadow: hsl(60, 82%, 39%) 1px 0 10px;
+  backdrop-filter: blur(0.4rem);
 }
 /* arrows */
 .arrows{
@@ -717,9 +727,9 @@ article .icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #eee4;
+  background-color: rgba(0, 0, 0, 0.822);
   border: none;
-  color: #fff;
+  color: #fafafa;
   font-family: monospace;
   font-weight: bold;
   transition: .5s;
