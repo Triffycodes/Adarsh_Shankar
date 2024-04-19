@@ -8,13 +8,21 @@ function toggleMenu() {
 function myFunction() {
   var element = document.body;
   element.classList.toggle("dark-mode");
-  if(element.classList.contains("dark-mode") && document.getElementById("checkbox").checked && window.innerWidth<=1200){
-    document.getElementById("switch").checked = true;
-  }
-  else{
-    document.getElementById("switch").checked = false;
-  }
+  var checkbox = document.getElementById("dark-mode-toggle");
+  checkbox.checked = element.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", element.classList.contains("dark-mode"));
 }
+
+// On page load, check local storage and apply dark mode if necessary
+document.addEventListener("DOMContentLoaded", function() {
+  var darkMode = localStorage.getItem("darkMode");
+  if (darkMode === "true") {
+    document.body.classList.add("dark-mode");
+    document.getElementById("dark-mode-toggle").checked = true;
+  }
+});
+
+
 
 //step 1: get DOM
 let nextDom = document.getElementById('next');
@@ -65,3 +73,38 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+
+// Get the container and links
+const platformLinks = document.querySelectorAll('.platform-link');
+const dashboardContainer = document.querySelector('.dashboard-container');
+const iframeContainer = document.querySelector('.iframe-container');
+
+// Add an event listener to each link
+platformLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const platform = link.getAttribute('data-platform');
+    const username = link.getAttribute('data-username');
+    // Use the platform name to construct the dashboard URL
+    const dashboardUrl = `https://${platform}.com/${username}`;
+    // Create an iframe to display the dashboard
+    const iframe = document.createElement('iframe');
+    iframeContainer.classList.add('iframe-container');
+    iframe.src = dashboardUrl;
+    iframe.frameBorder = '0';
+    iframe.width = '100%';
+    iframe.height = '100%';
+    iframe.setAttribute('style', 'overflow: hidden; width: 100%; height: 70vh;');
+    // Add the iframe container class to the iframe container element
+    
+    // Add the iframe to the dashboard container
+    dashboardContainer.innerHTML = '';
+    dashboardContainer.appendChild(iframe);
+
+    // Show the dashboard container
+    dashboardContainer.style.display = 'block';
+
+    // Add the expanded class to the iframe container
+    iframeContainer.classList.add('expanded');
+  });
+});

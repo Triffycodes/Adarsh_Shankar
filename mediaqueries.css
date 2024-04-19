@@ -181,6 +181,10 @@
       padding-top: 4vh;
 
     }
+    #coding-platforms{
+      display: block;
+      height: 120vh;
+    }
 
     .section{
       margin: 0 0;
@@ -307,9 +311,13 @@
       text-align: center;
     }
 
-    #about{
+    #about,#coding-platforms{
       padding-top: 20vh;
 
+    }
+    #coding-platforms{
+      display: block;
+      height: 140vh;
     }
 
     .section{
