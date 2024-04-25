@@ -14,11 +14,13 @@
   --tertiary-color: hsla(198, 73%, 39%, 0.735);
   --hover-color:hsla(0, 70%, 65%, 0.757);
   --shadow-color: hsla(198, 73%, 39%, 0.735);
-  --btn-color-1: hsl(0, 0%, 0%);
-  --btn-color-2: hsl(0, 0%, 100%);
+  --btn-color-1: hsla(0, 0%, 0%, 0.913);
+  --btn-color-2: hsl(60, 100%, 99%);
   --nav-link-color: hsla(175, 37%, 65%, 0.598);
   --sb-track-color: #232e33;
   --sb-thumb-color: hsla(175, 37%, 65%, 0.598);
+  --cd-btn-color-1: hsla(0, 100%, 99%, 0.976);
+  --cd-btn-color-2: hsla(198, 73%, 39%, 0.735);
   
 }
 
@@ -33,6 +35,8 @@
   --nav-link-color: hsl(0, 3%, 7%);
   --sb-track-color: #232e33;
   --sb-thumb-color: hsla(24, 79%, 49%, 0.884);
+  --cd-btn-color-1: hsl(60, 100%, 99%);
+  --cd-btn-color-2: hsla(24, 79%, 49%, 0.884);
   
 }
 
@@ -416,11 +420,12 @@ section {
 }
 
 .btn {
-  font-weight: 600;
+  font-weight:bolder;
   transition: all 300ms ease;
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+
 }
 
 .btn-color-1,
@@ -433,25 +438,66 @@ section {
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
-  background: var(--btn-color-1);
-  color: var(--btn-color-2);
+.btn-color-1 {
+  background: var(--sb-thumb-color);
+  color: var(--sb-track-color);
+  
 }
 
 .btn-color-1:hover {
-  background: var(--btn-color-2);
-  color: var(--btn-color-1);
-  border: var(--btn-color-1) 0.1rem solid;
+  background: var(--btn-color-1);
+  color: var(--btn-color-2);
+  border: var(--sb-thumb-color) 0.1rem solid;
+  transform: scale(1.15);
+  
 }
 
 .btn-color-2 {
   background: var(--btn-color-2);
   color: var(--btn-color-1);
+  animation: animate-border 1s ease-in-out infinite;
+  animation-direction: alternate;
+  border: #692fa8 0.2rem solid;
+}
+@keyframes animate-border {
+  0% {
+    border-top-color: #ae4949;
+    
+  }
+  15% {
+    border-top-color: #f21151;
+    border-right-color: #cc0f6a;
+  }
+  30% {
+    border-right-color: #cc0f6a;
+  }
+  40%{
+    border-right-color: #d50f75;
+    border-bottom-color: #f70683;
+  }
+  50% {
+    border-bottom-color: #f70683;
+    border-left-color: #be0ad6;
+  }
+  70% {
+    border-bottom-color: #fc07d3;
+    border-left-color: #e20bc2;
+  }
+  85% {
+    border-left-color: #a231b0;
+  }
+  100% {
+    border-left-color: #a906f5;
+    border-top-color: #d019e0;
+    
+  }
 }
 
 .btn-color-2:hover {
-  border: var(--primary-color) 0.1rem solid;
+  border: #692fa8 0.1rem solid;
+  transform: scale(1.15);
+  background: var(--btn-color-1);
+  color: var(--btn-color-2);
 }
 
 .btn-container {
@@ -542,7 +588,7 @@ section {
 /* Coding Platform SECTION */
 /* Add some basic styling to the links and container */
 #coding-platforms{
-  height: 100vh;
+  height: fit-content;
   position: relative;
 }
 .platform-links {
@@ -554,15 +600,27 @@ section {
 .platform-link {
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 0.15rem solid var(--secondary-color);
   border-radius: 5px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
+.platform-links a{
+  border-radius: 20%;
+  background-color: var(--cd-btn-color-2);
+  color: var(--cd-btn-color-1);
+  
+}
+
+.platform-links a:hover{
+  background-color: var(--cd-btn-color-1);
+  color: var(--cd-btn-color-2);
+  transform: scale(1.1);
+}
 
 .platform-link img {
-  width: 20px;
+  width: 1.5rem;
   margin-right: 10px;
 }
 
@@ -578,17 +636,21 @@ section {
 }
 
 .iframe-container {
-  margin-top: 20px;
+  margin-top: 10px;
   position: relative;
+  
 }
 /* Add a class to increase the height of the iframe container */
 .iframe-container.expanded {
-  height: 100px;
+  height: 600px;
+  
 }
 
 .iframe-container iframe {
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 0, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.5), 0 0 70px rgba(0, 0, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 0, 255, 0.4), 0 0 50px rgba(0, 255, 255, 0.2), 0 0 70px rgba(0, 0, 255, 0.5);
+
 }
+
 
 
 
@@ -1139,7 +1201,15 @@ footer p {
 
 #experience-mode{
   display: relative;
-  
+  padding-top: 10vh;
+  height: 0vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+#coding-platforms-mode{
+  display: relative;
   padding-top: 10vh;
   height: 0vh;
   margin: 0 10rem;

@@ -6,6 +6,12 @@
   .about-containers {
     flex-wrap: wrap;
   }
+  #experience{
+    height: fit-content;
+  }
+  #coding-platforms{
+    height: fit-content;
+  }
   #contact,
   #projects {
     height: fit-content;
@@ -18,6 +24,12 @@
     }
     .about-containers {
       flex-wrap: wrap;
+    }
+    #coding-platforms{
+      height: fit-content;
+    }
+    #experience{
+      height: fit-content;
     }
     #contact,
     #projects {
@@ -40,6 +52,9 @@
       top: 4%;
     }
 
+    #coding-platforms{
+      height: fit-content;
+    }
 
     #experience,
     .experience-details-container {
@@ -183,7 +198,7 @@
     }
     #coding-platforms{
       display: block;
-      height: 120vh;
+      height: fit-content
     }
 
     .section{
@@ -287,10 +302,16 @@
       margin-bottom: 2rem;
     }
 
+
     .about-containers,
     .contact-info-upper-container,
     .btn-container {
       flex-wrap: wrap;
+    }
+
+    .details-container{
+      padding: 1rem;
+      
     }
     .contact-info-container {
       margin: 0;
@@ -317,7 +338,7 @@
     }
     #coding-platforms{
       display: block;
-      height: 140vh;
+      height: fit-content;
     }
 
     .section{

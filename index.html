@@ -24,6 +24,7 @@
       <div>
         <ul class="nav-links animated flipInY">
           <li><a href="#about-mode">About</a></li>
+          <li><a href="#coding-platforms-mode">Coding Profiles</a></li>
           <li><a href="#experience-mode">Experience</a></li>
           <li><a href="#projects-mode">Projects</a></li>
           <li><a href="#contact-mode">Contact</a></li>  
@@ -51,6 +52,7 @@
           
             <div class="menu-links">
               <li><a href="#about" onclick="toggleMenu()">About</a></li>
+              <li><a href="#coding-platforms">Coding Profiles</a></li>
               <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
               <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
               <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -77,7 +79,13 @@
             class="btn btn-color-2"
             onclick="window.open('./assets/Adarsh_Shankar_Resume.pdf')"
           >
-            Download CV
+            SDE Resume
+          </button>
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Adarsh_Shankar_Resume.pdf')"
+          >
+            Analyst CV
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
@@ -138,7 +146,7 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>&#127979 &nbsp;Master of Science in CS <br/>&#x1F3EB &nbsp; Bachelor of Engineering in CS </p>
+              <p>&#127979 &nbsp;Master of Science in CS <br/>&#x1F3EB &nbsp;Bachelor of Engineering in CS </p>
             </div>
           </div>
           <div class="text-container">
@@ -155,40 +163,49 @@
         src="./assets/arrow.png"
         alt="Arrow icon"
         class="icon arrow"
-        onclick="location.href='./#experience-mode'"
+        onclick="location.href='./#coding-platforms-mode'"
       />
     </section>
-
-    <section id="experience-mode"></section>
+    
+    <section id="coding-platforms-mode"></section>
     <section id="coding-platforms">
       <p class="section__text__p1"></p>
       <h1 class="title">Coding Profiles</h1>
             <!-- Add a container element to your website -->
       <div class="platform-links">
         <!-- Add links to each platform with logos -->
-        <a href="https://leetcode.com/TriffyCodes/" class="platform-link" data-platform="leetcode" data-username="TriffyCodes">
-          <img src="https://leetcode.com/favicon.ico" alt="LeetCode Logo">
+        <a href="#" class="platform-link" data-platform="leetcode" data-domain="com" data-username="TriffyCodes">
+          <img src="./assets/leetcode.png" alt="LeetCode Logo">
           LeetCode
         </a>
-        <a href="#" class="platform-link" data-platform="gfg">
-          <img src="https://static.geeksforgeeks.org/static/media/GeeksforGeeks.33c2b0df.svg" alt="GeeksforGeeks Logo">
-          GeeksforGeeks
+        <a href="#" class="platform-link" data-platform="naukri" data-domain="com" data-username="code360/profile/TriffyCodes">
+          <img src="./assets/codingninjas.svg" alt="HackerRank Logo">
+          CodingNinjas
         </a>
-        <a href="#" class="platform-link" data-platform="hackerrank">
-          <img src="https://hackerrank.com/favicon.ico" alt="HackerRank Logo">
+        <a href="#" class="platform-link" data-platform="hackerrank" data-domain="com" data-username="profile/TriffyCodes">
+          <img src="./assets/hackerrank.png" alt="HackerRank Logo">
           HackerRank
         </a>
-        <a href="#" class="platform-link" data-platform="github">
+        <a href="#" class="platform-link" data-platform="gfg" data-domain="org" data-username="user/triffycodes">
+          <img src="./assets/gfg.png" alt="GeeksforGeeks Logo">
+          GeeksforGeeks
+        </a>
+        <a href="#" class="platform-link" data-platform="github" data-domain="com" data-username="TriffyCodes">
           <img src="https://github.com/favicon.ico" alt="GitHub Logo">
           GitHub
         </a>
-        
-        
+
       </div>
       <!-- Add a container for the dashboard -->
       <div class="iframe-container">
         <div class="dashboard-container"></div>
       </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience-mode'"
+      />
     </section>
     
     <section id="experience-mode"></section>
@@ -197,6 +214,33 @@
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
+          
+        <div class="working-experience"> 
+          <p><h3>Software Engineer Intern, Oak Street Health, Chicago, USA.</h3><b>June 2023 – August 2023</b><br>
+          ●	Developed two automation bots using a scripting language called PowerShell, which reduced the workload of the TechOps team by an impressive 30%. This saved the team approximately 40 hours of work per week. <br>
+          ●	This led to a significant 45% improvement in operational efficiency, resulting in faster issue resolution and better system performance in SolarWinds Orion and Database Performance Analyzer.<br>
+          <b>Tech Stack: PowerShell, SolarWinds Orion, Database Performance Analyzer, MySQL.</b> 
+          </div>
+          <hr size="" style="width:800rem;">
+          <div class="working-experience"> 
+                <p><h3>Systems Engineer, Infosys Limited, Bangalore, India.</h3><b>December 2019 – September 2021</b><br>
+                ●	Modified 70% of the User interface screens for the “Medtronic” web application used by more than 100,000 people across 150 countries.<br>
+                ●	Overhauled over 80% of specifications and Decode/ Encode/ Dependencies/ Pertinent rules for device parameters.<br>
+                ●	Tested overall implemented code using the Medtronic Defined test tool called Bench Programmer and reduced 40% of errors to get the desired result.<br>
+                ●	Checked the existing simulation files and wrote more than 700 test cases.<br>
+                ●	Used the Test Runner tool as per requirement which optimized and boosted the efficiency of the application by 35%.<br>
+                <b>Tech Stack: C#, JavaScript, ASP.NET, Jenkins, JSON, MySQL, Html, CSS, 2090 Programmer.</b> 
+                </p>
+          </div>
+          <hr size="" style="width:800rem;">
+          <div class="working-experience"> 
+              <p><h3>Software Engineer Intern, Ventalyst Business Solutions, Shivamogga, India.</h3><b>July 2018 – October 2018</b><br>
+                ●	Developed a ‘Gym Management System’ web application which holds 1000+ users data using Agile methodology.<br>
+                ●	Optimized the application and increased the overall performance to 97%.<br>
+                ●	Documented project information, and work progress, to analyze performance, and put corrective measures.<br>
+                <b>Tech Stack: JavaScript, Html5, CSS3, MySQL, Jira.</b> 
+              </p>
+              </div>
           <div class="details-container">
             <h2 class="experience-sub-title">Software Engineer</h2>
 
@@ -212,6 +256,7 @@
                   <p>Experienced</p>
                 </div>
               </article>
+              
               <article>
                 <img
                   src="./assets/checkmark.png"
@@ -219,7 +264,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>JavaScript</h3>
+                  <h3>C++</h3>
                   <p>Experienced</p>
                 </div>
               </article>
@@ -230,7 +275,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>C++</h3>
+                  <h3>JavaScript</h3>
                   <p>Experienced</p>
                 </div>
               </article>
