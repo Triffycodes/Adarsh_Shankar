@@ -38,7 +38,7 @@ let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 3000;
+let timeRunning = 1000;
 let timeAutoNext = 7000;
 
 nextDom.onclick = function(){
@@ -105,62 +105,20 @@ platformLinks.forEach((link) => {
     }else {
       dashboardUrl = `https://www.${platform}.${domainName}/${username}`;
     }
-    
-    // Create an iframe to display the dashboard
-    const iframe = document.createElement('iframe');
-    iframeContainer.classList.add('iframe-container');
-    iframe.src = dashboardUrl;
-    iframe.frameBorder = '0';
-    iframe.width = '100%';
-    iframe.height = '100%';
-    iframe.setAttribute('style', 'overflow: hidden; width: 100%; height: 70vh;');
-    
-    // Add the iframe to the dashboard container
-    dashboardContainer.innerHTML = '';
-    const buttonContainer = document.createElement('div');
-    buttonContainer.style.display = 'flex';
-    buttonContainer.style.justifyContent = 'center';
-    buttonContainer.style.marginBottom = '20px';
-    dashboardContainer.appendChild(buttonContainer);
-    dashboardContainer.appendChild(iframe);
-
-    // Show the dashboard container
-    dashboardContainer.style.display = 'block';
-    
-    // Add the expanded class to the iframe container
-    iframeContainer.classList.add('expanded');
-    
-    // If GitHub, add a message and button
-    if (platform === 'github' || platform === 'hackerrank' || platform === 'gfg') {
-      const message = document.createElement('p');
-      message.textContent = "Ohh snap!, they don't want me to show my progress :( click here!";
-      buttonContainer.appendChild(message);
-      const br = document.createElement('br'); // Add a line break
-      buttonContainer.appendChild(br);
-      const button = document.createElement('button');
-      button.textContent = 'Visit Site';
-      button.style.background = 'linear-gradient(to right, #ff69b4, #ff97c9)';
-      button.style.marginLeft = '1rem';
-      button.style.color = '#fff';
-      button.style.padding = '10px 20px';
-      button.style.border = 'none';
-      button.style.borderRadius = '10px';
-      button.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)';
-      button.style.cursor = 'pointer';
-      buttonContainer.appendChild(button);
-      button.style.transition = 'transform 0.5s';
-      button.addEventListener('mouseover', () => {
-        button.style.transform = 'scale(1.3)';
-      });
-      
-      button.addEventListener('mouseout', () => {
-        button.style.transform = 'scale(1)';
-      });
-      
-      
-      button.addEventListener('click', () => {
-        window.location.href = dashboardUrl;
-      });
-    }
+    window.location.href = dashboardUrl;
   });
 });
+
+function submitForm(event) {
+  // Prevent the default form submission behavior
+  event.preventDefault();
+  
+  // Your form submission logic here (if needed)
+  // Submit the form to Formspree
+  document.getElementById("feedbackForm").submit();
+  
+  // Reset the form
+  document.getElementById("feedbackForm").reset();
+  
+  
+}

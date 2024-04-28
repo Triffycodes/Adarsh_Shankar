@@ -138,13 +138,18 @@
     }
   }
 
- 
+  form {
+    
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
 
   
   @media screen and (max-width: 600px) {
     #contact,
     footer {
-      height: 40vh;
+      height: fit-content;
     }
     #profile {
       
@@ -276,7 +281,8 @@
   @media screen and (max-width: 320px) {
     #contact,
     footer {
-      height: 40vh;
+      height: fit-content;
+
     }
 
     .switch {
@@ -406,5 +412,10 @@
     gap: 0.5rem;
     margin-top: 2rem;
   }
-   
-  
+ 
+  form {
+    padding-left: 3rem;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
