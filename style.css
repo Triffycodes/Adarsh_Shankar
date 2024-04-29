@@ -62,14 +62,14 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
+  background: var(--nav-link-color);
   border-radius: 0px;
 }
 
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
-  border: 3px solid #232e33;
+  border: 2px solid #747f84;
 }
 
 @supports not selector(::-webkit-scrollbar) {
