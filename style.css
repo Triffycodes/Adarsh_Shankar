@@ -9,6 +9,23 @@
   padding: 0;
 }
 :root {
+  --primary-color: #183D3D;
+  --secondary-color: #DDE6ED;
+  --tertiary-color: #B9B4C7;
+  --shadow-color: hsla(24, 53%, 45%, 0.598);
+  --btn-color-1: #b2c1c1;
+  --btn-color-2: #2c4a3e;
+  --nav-link-color: #040D12;
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #bbc5c5;
+  --cd-btn-color-1: #b2c1c1;
+  --cd-btn-color-2: #2c4a3e;
+  --heading-color: #77B0AA;
+  --footer-social-color: #e9873b;
+}
+
+/* DARK MODE */
+.dark-mode {
   --primary-color: #D7E4C0;
   --secondary-color: #183D3D;
   --tertiary-color: #4F6F52;
@@ -23,24 +40,6 @@
   --cd-btn-color-2: #4F6F52;
   --heading-color: #A87676;
   --footer-social-color: #199595;
-  
-}
-
-/* DARK MODE */
-.dark-mode {
-  --primary-color: #183D3D;
-  --secondary-color: #DDE6ED;
-  --tertiary-color: #B9B4C7;
-  --shadow-color: hsla(24, 53%, 45%, 0.598);
-  --btn-color-1: #b2c1c1;
-  --btn-color-2: #2c4a3e;
-  --nav-link-color: #040D12;
-  --sb-track-color: #232e33;
-  --sb-thumb-color: #bbc5c5;
-  --cd-btn-color-1: #b2c1c1;
-  --cd-btn-color-2: #2c4a3e;
-  --heading-color: #77B0AA;
-  --footer-social-color: #e9873b;
   
 }
 
@@ -192,7 +191,7 @@ a:hover {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-image: url("assets/icons8-sun-48.png");
+  background-image: url("assets/icons8-moon-50.png");
   background-size: cover;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -207,7 +206,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  background-image: url("assets/icons8-moon-50.png");
+  background-image: url("assets/icons8-sun-48.png");
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
