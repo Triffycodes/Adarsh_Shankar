@@ -17,6 +17,19 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adarsh Shankar</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon_img.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      
+    </style>
   </head>
   <body>
     
@@ -95,18 +108,20 @@
         </div>
 
         <div id="socials-container">
-          <img
-            src="assets/icons8-linkedin-64.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/adarshshankarofficial/'"
-          />
-          <img
-            src="assets/icons8-github-64.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Triffycodes'"
-          />
+          <a href="https://www.linkedin.com/in/adarshshankarofficial/" target="_blank">
+            <img
+              src="assets/icons8-linkedin-64.png"
+              alt="My LinkedIn profile"
+              class="icon"
+            />
+          </a>
+          <a href="https://github.com/Triffycodes" target="_blank">
+            <img
+              src="assets/icons8-github-64.png"
+              alt="My Github profile"
+              class="icon"
+            />
+          </a>
         </div>
       </div>
 
@@ -175,30 +190,29 @@
       <p class="section__text__p1"></p>
       <h1 class="title">Coding Profiles</h1>
             <!-- Add a container element to your website -->
-      <div class="platform-links">
-        <!-- Add links to each platform with logos -->
-        <a href="#" class="platform-link" data-platform="leetcode" data-domain="com" data-username="TriffyCodes">
-          <img src="./assets/leetcode.png" alt="LeetCode Logo">
-          LeetCode
-        </a>
-        <a href="#" class="platform-link" data-platform="naukri" data-domain="com" data-username="code360/profile/TriffyCodes">
-          <img src="./assets/codingninjas.svg" alt="HackerRank Logo">
-          CodingNinjas
-        </a>
-        <a href="#" class="platform-link" data-platform="hackerrank" data-domain="com" data-username="profile/TriffyCodes">
-          <img src="./assets/hackerrank.png" alt="HackerRank Logo">
-          HackerRank
-        </a>
-        <a href="#" class="platform-link" data-platform="gfg" data-domain="org" data-username="user/triffycodes">
-          <img src="./assets/gfg.png" alt="GeeksforGeeks Logo">
-          GeeksforGeeks
-        </a>
-        <a href="#" class="platform-link" data-platform="github" data-domain="com" data-username="TriffyCodes" onclick="https://github.com/Triffycodes">
-          <img src="https://github.com/favicon.ico" alt="GitHub Logo">
-          GitHub
-        </a>
-
-      </div>
+            <div class="platform-links">
+              <!-- Add links to each platform with logos -->
+              <a href="#" class="platform-link" data-platform="leetcode" data-domain="com" data-username="TriffyCodes" target="_blank">
+                <img src="./assets/leetcode.png" alt="LeetCode Logo">
+                LeetCode
+              </a>
+              <a href="#" class="platform-link" data-platform="naukri" data-domain="com" data-username="code360/profile/TriffyCodes" target="_blank">
+                <img src="./assets/codingninjas.svg" alt="CodingNinjas Logo">
+                CodingNinjas
+              </a>
+              <a href="#" class="platform-link" data-platform="hackerrank" data-domain="com" data-username="profile/TriffyCodes" target="_blank">
+                <img src="./assets/hackerrank.png" alt="HackerRank Logo">
+                HackerRank
+              </a>
+              <a href="#" class="platform-link" data-platform="gfg" data-domain="org" data-username="user/triffycodes" target="_blank">
+                <img src="./assets/gfg.png" alt="GeeksforGeeks Logo">
+                GeeksforGeeks
+              </a>
+              <a href="#" class="platform-link" data-platform="github" data-domain="com" data-username="TriffyCodes" target="_blank">
+                <img src="https://github.com/favicon.ico" alt="GitHub Logo">
+                GitHub
+              </a>
+            </div>
       <!-- Add a container for the dashboard -->
       <div class="iframe-container">
         <div class="dashboard-container"></div>
@@ -483,138 +497,86 @@
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       
-    <div class="arrows">
-        <button id="prev"><</button>
-        <button id="next">></button>
-    </div>
-      <!-- carousel -->
-    <div class="carousel">
-      <!-- list item -->
-      <div class="list">
-          <div class="item">
-              <img src="./assets/nammakarnataka.jpeg">
-              <div class="content">
-                  
-                  <div class="title">Namma Karnataka</div>
-                  
-                  <div class="des">
-                    "Namma Karnataka" is a website that gives details of 100+ of the tourist places of Karnataka, India and hotel details near them.
+      <div class="project-grid">
+         <!-- Project Card 1 -->
+         <div class="project-card">
+          <img src="./assets/TravelMateAI.png" alt="TravelMateAI">
+          <div class="content">
+            <h2>TravelMateAI</h2>
+            <p>A Travel Planner website powered by AI, to make your journey easier.</p>
+            <div class="buttons">
+              <a href="https://github.com/Triffycodes/TravelMateAI" target="_blank">GitHub</a>
+              <a href="https://travel-mate-ai-one.vercel.app/" target="_blank">Live</a>
+            </div>
+            <br>
+            <p><small>Tech: React, Tailwind, Redux, Node.js</small></p>
+          </div>
+        </div>
 
-                  </div>
-                  <div class="buttons">
-                      <button onclick="location.href='https://github.com/Triffycodes/Namma-Karnataka'">GitHub</button>
-                      <button onclick="location.href='https://triffycodes.github.io/Namma-Karnataka/'">Live</button>
-                  </div>
-              </div>
+         <!-- Project Card 2 -->
+         <div class="project-card">
+          <img src="./assets/pen-and-pixels.png" alt="Pen and Pixels">
+          <div class="content">
+            <h2>Pen and Pixels</h2>
+            <p>A Blog app, where your thoughts can meet pen and pictures.</p>
+            <div class="buttons">
+              <a href="https://github.com/Triffycodes/Pen-and-Pixels" target="_blank">GitHub</a>
+              <a href="https://pen-and-pixels.vercel.app/" target="_blank">Live</a>
+            </div>
+            <br>
+            <p><small>Tech: React, Tailwind, Redux, Appwrite</small></p>
           </div>
-          <div class="item">
-              <img src="./assets/Tindog.png">
-              <div class="content">
-                  
-                  <div class="title">Tindog</div>
-                  
-                  <div class="des">
-                      "Tindog" is a website that is a clone of Tinder but for dogs. It is a fun project to learn about Bootstrap.
-                  </div>
-                  <div class="buttons">
-                    <button onclick="location.href='https://github.com/Triffycodes/TinDog'">GitHub</button>
-                    <button onclick="location.href='https://triffycodes.github.io/TinDog/'">Live</button>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="./assets/titanic.png">
-              <div class="content">
-                  
-                  <div class="title">Analysis of the Titanic Dataset</div>
-                  
-                  <div class="des">
-                    The Data Analysis project examines the Titanic dataset to reveal factors affecting passenger survival.</div>
-                  <div class="buttons">
-                    <button onclick="location.href='https://github.com/Triffycodes/Analysis-of-the-Titanic-Dataset'">GitHub</button>
-                    <button onclick="location.href='https://triffycodes.github.io/Analysis-of-the-Titanic-Dataset/'">Live</button>
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="./assets/gym.jpeg">
-              <div class="content">
-                  
-                  <div class="title">Gym Management</div>
-                  
-                  <div class="des">
-                    This project automates gym operations by storing records in a user-friendly database, facilitating easy access for personnel.</div>
-                  <div class="buttons">
-                    <button onclick="location.href='https://github.com/Triffycodes/Gym-Management-System/'">GitHub</button>
-                    <button onclick="location.href='https://github.com/Triffycodes/Gym-Management-System/'">Live</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- list thumnail -->
-      <div class="thumbnail">
-          <div class="item">
-              <img src="./assets/nammakarnataka.jpeg">
-              <div class="content">
-                  <div class="title">
-                      Namma Karnataka
-                  </div>
-                  <div class="description">
-                      A tourist website
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="./assets/Tindog.png">
-              <div class="content">
-                  <div class="title">
-                    Tindog
-                  </div>
-                  <div class="description">
-                      Tinder for dogs
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="./assets/titanic.png">
-              <div class="content">
-                  <div class="title">
-                    Analysis of the Titanic Dataset
-                  </div>
-                  <div class="description">
-                      A Data Analysis
-                  </div>
-              </div>
-          </div>
-          <div class="item">
-              <img src="./assets/gym.jpeg">
-              <div class="content">
-                  <div class="title">
-                    Gym System
-                  </div>
-                  <div class="description">
-                    A Gym website
-                  </div>
-              </div>
-          </div>
-      </div>
-      <!-- next prev -->
+        </div>
 
+        <!-- Project Card 3 -->
+        <div class="project-card">
+          <img src="./assets/nammakarnataka.jpeg" alt="Namma Karnataka">
+          <div class="content">
+            <h2>Namma Karnataka</h2>
+            <p>A website featuring 100+ tourist places in Karnataka with hotel details.</p>
+            <div class="buttons">
+              <a href="https://github.com/Triffycodes/Namma-Karnataka" target="_blank">GitHub</a>
+              <a href="https://triffycodes.github.io/Namma-Karnataka/" target="_blank">Live</a>
+            </div>
+            <br>
+            <p><small>Tech: JavaScript, Html, CSS, Bootstrap</small></p>
+          </div>
+        </div>
+        
+        <!-- Project Card 4 -->
+        <div class="project-card">
+          <img src="./assets/Tindog.png" alt="Tindog">
+          <div class="content">
+            <h2>Tindog</h2>
+            <p>A Tinder clone for dogs, built using Bootstrap.</p>
+            <div class="buttons">
+              <a href="https://github.com/Triffycodes/TinDog" target="_blank">GitHub</a>
+              <a href="https://triffycodes.github.io/TinDog/" target="_blank">Live</a>
+            </div>
+            <br>
+            <p><small>Tech: JavaScript, Html, CSS, Bootstrap</small></p>
+          </div>
+        </div>
+        
+        <!-- Project Card 5 -->
+        <div class="project-card">
+          <img src="./assets/titanic.png" alt="Titanic Data Analysis">
+          <div class="content">
+            <h2>Titanic Data Analysis</h2>
+            <p>Analysis of the Titanic dataset to reveal survival factors.</p>
+            <div class="buttons">
+              <a href="https://github.com/Triffycodes/Analysis-of-the-Titanic-Dataset" target="_blank">GitHub</a>
+              <a href="https://triffycodes.github.io/Analysis-of-the-Titanic-Dataset/" target="_blank">Live</a>
+            </div>
+            <br>
+            <p><small>Tech: Python, Pandas, Numpy, ggplot, ML</small></p>
+          </div>
+        </div>
+      </div>
       
-      <!-- time running -->
-      <div class="time"></div>
-  </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow arrow-carousel"
-        onclick="location.href='./#contact-mode'"
-      />
-
       <div class="more-projects">
-        <br>
         <p>For more Projects</p>
-        <a href="#" class="platform-link" data-platform="github" data-domain="com" data-username="TriffyCodes" onclick="https://github.com/Triffycodes">
+        <a href="#" class="platform-link" data-platform="github" data-domain="com" data-username="TriffyCodes" target="_blank">
           <img src="https://github.com/favicon.ico" alt="GitHub Logo">
           GitHub
         </a>
@@ -967,11 +929,11 @@
     </section>
     <footer>
       <div class="social-icons">
-        <a href="https://www.facebook.com/Adarsh.gowda20"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com/AdarshGowda2097"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/adarsh.shankarr/"><i class="fab fa-instagram"></i></a>
-        <a href="https://github.com/Triffycodes"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/adarshshankarofficial/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/Adarsh.gowda20" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/AdarshGowda2097" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/adarsh.shankarr/" target="_blank"><i class="fab fa-instagram" ></i></a>
+        <a href="https://github.com/Triffycodes" target="_blank"><i class="fab fa-github" ></i></a>
+        <a href="https://www.linkedin.com/in/adarshshankarofficial/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <!-- Add more social media icons and links as needed -->
       </div>
       <nav>
@@ -986,7 +948,8 @@
         </div>
       </nav>
       
-      <p>Copyright &#169; 2024 &nbsp;&nbsp; &#9824; &nbsp; Adarsh Shankar &nbsp;&#9824; &nbsp;&nbsp; All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 &nbsp;&nbsp; &#9824; &nbsp; Adarsh Shankar &nbsp;&#9824; &nbsp;&nbsp; All Rights Reserved.</p>
+      <br>
     </footer>
     <script src="script.js"></script>
   </body>
