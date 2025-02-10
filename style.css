@@ -49,7 +49,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  
+
 }
 
 
@@ -336,7 +336,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: 60vh;
 }
 
 .section__pic-container {
@@ -513,23 +513,40 @@ section {
 
 #about {
   position: relative;
-  
+  padding-top: 0;
 }
 
+
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
 .about-details-container {
+  display: flex;
   justify-content: center;
-  flex-direction: column;
+  gap: 0 2rem;
+  flex-direction: row;
 }
 
-.about-containers,
 .about-details-container {
   display: flex;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: var(--primary-color);
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.2rem solid;
+  border-color: rgb(0, 0, 0);
+  text-align: center;
+  height: max-content;
+  
+}
+
+.details-container p{
+  text-align: center;
+  text-wrap: nowrap;
 }
 
 .about-pic {
@@ -550,22 +567,10 @@ section {
 
 }
 
-.details-container {
-  padding: 1.5rem;
-  flex: 1;
-  background: var(--primary-color);
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.2rem solid;
-  border-color: rgb(0, 0, 0);
-  text-align: center;
-}
 
-.details-container p{
-  text-align: left;
-  text-wrap: nowrap;
-}
 .section-container {
   display: flex;
+  justify-content: center;
   gap: 4rem;
   height: 80%;
 }
@@ -576,18 +581,6 @@ section {
   
 }
 
-
-.section__pic-container-2 {
-  height: 400px;
-  width: 400px;
-  margin: 0 auto;
-}
-
-.section__pic-container-2 img{
-  height: 400px;
-  width: 400px;
-  
-}
 
 /* Coding Platform SECTION */
 /* Add some basic styling to the links and container */
@@ -858,13 +851,13 @@ article .icon {
 /* On screens wider than 768px, show multiple cards per row */
 @media (min-width: 768px) {
   .project-grid {
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(350px, 0fr));
   }
 }
 /* On smaller screens, stack cards */
 @media (max-width: 767px) {
   .project-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: 0fr;
   }
 }
 
